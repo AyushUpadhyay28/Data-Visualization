@@ -1,0 +1,320 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+#headContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+/** button image **/
+.headContainer {
+    position: relative;
+    width: 100%;
+    display: inline;
+  }
+  
+  #backgroundImg{
+    margin-top: 20px;
+    width: 85%;
+  }
+
+  .bottom-left {
+    
+    font-size: 32px;
+    /* background-color: white; */
+    font-weight: bold;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: rgb(97, 97, 97);
+  }
+  
+
+  
+  .nextElement{
+    font-size: 20px;
+    margin: 40px;
+  }
+
+
+  
+/* Create two equal columns that floats next to each other */
+.graphSide {
+  float: left;
+  width: 61%;
+  padding: 10px;
+  height: 620px; /* Should be removed. Only for demonstration */
+}
+
+.textSide {
+  float: left;
+  width: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  height: 700px; 
+  border-left: 3px solid #bbb;
+}
+.row{
+  width: 100%;
+  margin: 40px;
+}
+
+.rowFooter{
+  width: 100%;
+  background: rgb(97, 97, 97);
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.headerBar{
+  width: 100%;
+  background: rgb(97, 97, 97);
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:60px;
+}
+
+.left {
+  width: 40%;
+  padding: 15px 20px 10px 10px;
+  color: rgb(255, 255, 255);
+  height: 30px;
+
+}
+
+
+#leftTitle{
+  font-size: 22px;
+}
+
+.right {
+  width: 60%;
+  float: right;
+  text-align: right;
+  padding: 15px 20px 10px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  height: 30px; 
+}
+
+
+#subLeft {
+  display: inline-block;
+  padding: 5px 20px 10px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  
+
+}
+
+#subRight {
+  display: inline-block;
+}
+
+.rightTitle {
+  width: 60%;
+  float: right;
+  text-align: right;
+  padding: 15px 20px 10px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  height: 30px; 
+}
+#icon{
+  display: inline-block;
+}
+/* Clear floats after the columns */
+.row:after {
+  background-color: white;
+  content: "";
+  display: table;
+  clear: both;
+}  
+
+  
+  /* Solid border */
+  hr.solid {
+    border-top: 3px solid #bbb;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+  footer{
+    background-color: rgb(0, 204, 0);
+  }
+
+
+  .line{
+    fill: none;
+    
+    stroke-width: 0.7;
+  }
+
+  .tooltip > path {
+    fill: white;
+    background-color: white;
+    stroke: black;
+  }
+  
+  .tooltip > text {
+    font-family: "Ubuntu";
+    font-size: 12px;
+    fill: black;
+    stroke: none;
+  }
+
+
+  #tooltip { position : absolute; width : 200px; height : auto; padding : 10px; background-color : white; -webkit-border-radius : 10px; -moz-border-radius : 10px; border-radius : 10px; -webkit-box-shadow : 4px 4px 10px rgba(0, 0, 0, 0.4); -moz-box-shadow : 4px 4px 10px rgba(0, 0, 0, 0.4); box-shadow : 4px 4px 10px rgba(0, 0, 0, 0.4); pointer-events : none; display: none; }
+
+  .button {
+    background-color:#D3D3D3; 
+    color: white; 
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius : 5px;
+    float: right;
+    font-size: 14px;
+    margin: 20px 120px;
+    cursor: pointer;
+    border: 2px solid slategrey;
+} /* Blue */
+
+.box {
+  float: left;
+  height: 15px;
+  width: 15px;
+  margin-right: 6px;
+  
+  
+}
+
+.total{
+  background-color: #001254;
+}
+
+.totalText{
+  color: #001254;
+  margin-left: 20px;
+}
+
+
+.coal{
+  background-color: #6C4800;
+}
+
+.coalText{
+  color: #6C4800;
+}
+
+.oil{
+  background-color: slategrey;
+}
+
+.oilText{
+  color: slategrey;
+}
+
+.gas{
+  background-color: red;
+}
+
+.gasText{
+  color: red;
+}
+
+
+.renew{
+  background-color: #259500;
+}
+
+.renewText{
+  color: #259500;
+}
+
+.legend{
+  margin-bottom: 5px;
+  margin-top: 30px;
+  font-size: 14px;
+  display:inline-block;
+  margin-right: 15px;
+}
+
+.legend:hover{
+  opacity: 0.5;
+}
+
+
+
+.coal2{
+  background-color: brown;
+}
+
+
+.coalText2{
+  color: brown;
+  margin-left: 20px;
+}
+
+
+.oil2{
+  background-color: slategrey;
+}
+
+.oilText2{
+  color: slategrey;
+}
+
+.gas2{
+  background-color: darkgreen;
+}
+
+.gasText2{
+  color: darkgreen;
+}
+
+.cement{
+  background-color: blue;
+}
+
+.cementText{
+  color: blue;
+}
+
+.others{
+  background-color: darkorange;
+}
+
+.othersText{
+  color: darkorange;
+}
+
+.flaring{
+  background-color: purple;
+}
+
+.flaringText{
+  color: purple;
+}
+
+
+ul{
+  margin-left: 25px;
+}

@@ -1,0 +1,59 @@
+[
+ {
+   "States": "South Australia",
+   "Coal": 24.7,
+   "Oil": 135.8,
+   "Gas": 108.9,
+   "Renewables": 40.9,
+   "Total": 312.7
+ },
+ {
+   "States": "New South Wales",
+   "Coal": 606.6,
+   "Oil": 611.4,
+   "Gas": 132.9,
+   "Renewables": 95.6,
+   "Total": 1468.8
+ },
+ {
+   "States": "Victoria",
+   "Coal": 423.2,
+   "Oil": 454.0,
+   "Gas": 283.4,
+   "Renewables": 77.4,
+   "Total": 1235.6
+ },
+ {
+   "States": "Tasmania",
+   "Coal": 8.3,
+   "Oil": 37.3,
+   "Gas": 6.8,
+   "Renewables": 47.4,
+   "Total": 99.4
+ },
+ 
+ {
+   "States": "Queensland",
+   "Coal": 524.3,
+   "Oil": 536.2,
+   "Gas": 311.8,
+   "Renewables": 127.0,
+   "Total": 1477.5
+ },
+ {
+  "States": "Western Australia",
+  "Coal": 119.5,
+  "Oil": 430,
+  "Gas": 693.4,
+  "Renewables": 29.1,
+  "Total": 1271.9
+},
+ {
+   "States": "Northern Territory",
+   "Coal": 0,
+   "Oil": 36.5,
+   "Gas": 110.1,
+   "Renewables": 1.3,
+   "Total": 147.9
+ }
+]

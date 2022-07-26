@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"	content="Data Visualisation Renewable Energy Project"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Khiem Truong, Ayush Upadhyay"/>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Renewable Energy Visualisation</title>
+	<!--Insert description of exercise  -->
+</head>
+<body>  
+  <header>
+    <div class="headerBar">
+      <div class="left" id = "leftTitle">
+        <p>Sustainable Energy</p>
+        
+      </div>
+      <div class="right"  id = "leftTitle">
+        <div id = "subLeft"><p>Home</p></div>
+        <div id = "subRight"><i class="fa fa-home"></i></div>
+        
+      </div>
+    </div>
+    <div id="headContainer">
+        <img id ="backgroundImg" src="assets/background-img3.jpg" alt="">
+        <div class="bottom-left"> IT IS TIME FOR AUSTRALIA TO INVEST MORE IN RENEWABLE ENERGY </div>
+     </div>
+</header>
+    <main>
+        
+        <div class= "nextElement">As time passes, the globe must transition towards adopting renewable energy resources in order to maintain a sustainable ecosystem. In present circumstances, the over use of fossil fuels has harmed the ecosystem and has accelerated the rate of climate change. The main goal of these visualisations is to demonstrate that renewable energy resources emit less carbon dioxide (CO<sub>2</sub>), therefore if we transition to utilising renewable energy as the primary source of energy, we can have a healthy and sustainable environment.
+        <br><br>
+        We will demonstrate the detrimental effects of burning fossil fuels by displaying CO2 emissions from various fuel resources in Australia during the last 20 years in the first visualisation on this page (1990 - 2020). The following visualisation depicts the energy mix of Australia's energy consumption by various states and territory during the last 20 years (1990-2020). This offers us an idea of which fuel resource is most commonly used to carry out state services in Australia. Finally, the third visualisation will show the increasing trend in the use of renewable energy sources in Australia, such as hydro, solar, and wind energy, during the last 20 years (1990- 2020).
+      </div>
+        <hr class="solid">
+        <div class="row">
+            <div class="graphSide">
+              <h2>CO<sub>2</sub> emission by fuel, Australia</h2>
+             
+                <div class = "legend coalText2" onclick=" hideChart('coal')" ><div class='box coal2'></div>Coal</div>
+                <div class = "legend oilText2" onclick=" hideChart('oil')"><div class='box oil2'></div>Oil</div>
+                <div class = "legend gasText2" onclick=" hideChart('gas')"><div class='box gas2'></div>Gas</div>
+                <div class = "legend flaringText" onclick=" hideChart('flaring')" ><div class='box flaring'></div>Flaring</div>
+                <div class = "legend othersText" onclick=" hideChart('others')"><div class='box others'></div>Others</div>
+                <div class = "legend cementText" onclick=" hideChart('cement')"><div class='box cement'></div>Cement</div>
+                <button class="button" type="button" onclick="hideChart('all') ">Reset</button>
+              <div id='tooltip'></div>
+              
+              <svg id="first_viz" width='820' height='600'></svg>
+              <!-- Create a div where the graph will take place -->
+              
+              
+            
+              <script src="scripts/line_chart.js"></script>
+            </div>
+            <div class="textSide">
+              <h2>Visualisation Description</h2><br>
+              <p>This visualisation is a line chart that depicts the carbon dioxide (CO2) emissions from various types of fuels in Australia. The x axis depicts the period in years from 1990 to 2020. The amount of carbon dioxide (CO2) emitted into the atmosphere in million tonnes is represented on the y-axis. Each sort of fuel resource is encoded with a particular colour, and the higher the line, the more CO2 emitted into the environment by that form of fuel.</p>
+              <p>The bold colours employed in this design are an efficient visual encoding for qualitative data (the type of resource).</p>
+              <br>
+              <p>For Example we have :</p>
+              <br>
+              <ul id ="list">
+                <li> brick red for coal.</li>
+                <li>grey for oil.</li>
+                <li>green for gas.</li>
+                <li>blue for cement.</li>
+                <li>purple for flaring.</li>
+                <li> yellow for others.</li>
+              </ul>
+              <br>
+              <p>It is also much easier to compare the amount of CO2 emitted by different fuel supplies by examining their own lines for each source.</p>
+            </div>
+          </div>
+          <hr class="solid">
+          <div class="row">
+              <div class="graphSide">
+                <h2>Australian energy mix, by state and territory 2019- 2020</h2>
+                <div class = "legend totalText" onclick=" updateChart('total')" ><div class='box total'></div>Total</div>
+                <div class = "legend coalText" onclick=" updateChart('coal')" ><div class='box coal'></div>Coal</div>
+                <div class = "legend oilText" onclick=" updateChart('oil')"><div class='box oil'></div>Oil</div>
+                <div class = "legend gasText" onclick=" updateChart('gas')"><div class='box gas'></div>Gas</div>
+                <div class = "legend renewText" onclick=" updateChart('renewable')"><div class='box renew'></div>Renewable</div>
+                <p id="second_viz"></p>
+                <script src="scripts/coal_data.js"></script>        
+                <script src="scripts/renew_data.js"></script>        
+                <script src="scripts/gas_data.js"></script>        
+                <script src="scripts/oil_data.js"></script>        
+        <script src="scripts/choropleths.js"></script>
+        
+              </div>
+              <div class="textSide">
+                <h2>Visualisation Description</h2><br>
+                <p>
+                  This is a choropleth graphic that illustrates an Australian map including all states and territories (borders for each state are marked as white, for a better separation between states). The quantity of energy spent by each state is represented by a sequential colour scale with varied colour saturation for different data kinds.
+                  <br><br>
+                  <ul id ="list">
+                  <li>Different shades of blue for total for the energy consumption.</li>
+                  <li>Different shades of brown for data of energy consumption through coal</li>
+                  <li>Different shades of grey for data of energy consumption through oil</li> 
+                  <li>Different shades of red for data of energy consumption through gas </li>
+                  <li>Different shades of green for data of energy consumption through renewable resources </li>
+                  </ul><br>
+                  This design is useful in many aspects, such as the colour saturation being able to efficiently transmit quantitative data. Displaying the quantity of energy consumed for each resource type will assist in comparing how much energy mix is consumed by a state for optimal operation.
+                </p>
+              </div>
+            </div>
+            <hr class="solid">
+            <div class="row">
+                <div class="graphSide">
+                  <h2>Australian electricity generation renewable sources</h2>
+                  <p id="third_viz"></p>
+                  <script src="scripts/stacked_area_chart.js"></script>
+                </div>
+                <div class="textSide">
+                  <h2>Visualisation Description</h2><br>
+                  <p>This visualisation is a Stacked area chart where the x-axis is encoded with the timeline in years from 1990- 2020. And the y-axis is displaying the amount of electricity generated in gigawatt hours.
+                    Each energy type is encoded with a separate colour to make it easily distinguishable between different energy types.<br><br>
+                    For reference:
+                    <ul id ="list">
+                    <li>Hydro energy is encoded with aqua color.</li>
+                    <li>Wind energy is encoded with yellow color.</li>
+                    <li>Bioenergy is encoded with brown color.</li>
+                    <li>Solar energy is encoded with deep orange color.</li>
+                  </ul>
+                  <br><br>
+                    
+                    This design pattern is very useful for showing the relationships between many categories. It is also often the best type of area chart to show the contribution that each category makes to the overall data.</p>
+                </div>
+              </div>
+
+
+            <div class="rowFooter">
+                <div class="left">
+                  <p>COS30045 Data Visualisation</p>
+                </div>
+                <div class="right">
+                  <p>Khiem Truong, Ayush Upadhyay</p>
+                </div>
+              </div>
+    
+    </main>
+        
+   
+</body>
+</html>
